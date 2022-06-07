@@ -1,0 +1,39 @@
+ul {
+  padding: 0px;
+}
+
+.sidebar-container {
+  height: 100%;
+  width: 15%;
+  background: rgb(93, 79, 125);
+  background: radial-gradient(
+    circle,
+    rgba(93, 79, 125, 1) 0%,
+    rgba(44, 49, 90, 1) 100%
+  );
+  border-radius: 10px 0px 0px 10px;
+  color: #fff;
+}
+
+.sidebar-option {
+  width: 100%;
+  border-radius: 25px;
+  height: 30px;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.sidebar-option__link {
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-option:hover {
+  background: #845ef7;
+  color: #fff;
+}

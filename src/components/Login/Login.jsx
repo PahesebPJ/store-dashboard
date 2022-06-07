@@ -14,7 +14,7 @@ const Login = () => {
     const usernameRef = useRef();
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/dashboard";
 
     const { setAuth } = useAuth();
 
@@ -36,12 +36,13 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(LOGIN_URL,{username, password})
+            const response = await axios.post(LOGIN_URL,{username, password});
             
             if(response?.data?.auth) {
+                const url = response.data.result[0].url
                 const accessToken = response.data.token;
 
-                setAuth({username,password,accessToken});
+                setAuth({username,password,accessToken,url});
                 navigate(from, {replace: true});
             } else {
                 setErrMsg(response.data.message);

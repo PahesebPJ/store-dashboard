@@ -7,6 +7,7 @@ import Layout from './components/Layout/Layout';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
         {/*PRIVATE ROUTES */}
         <Route element={<RequiredAuth />}>
-            <Route path="/" element={<h1>Hello world</h1>} />
+            <Route path="dashboard/*" element={<Dashboard />} />
         </Route>
       </Route>
     </Routes>

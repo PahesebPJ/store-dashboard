@@ -1,0 +1,16 @@
+.dashboard-container {
+  position: absolute;
+  height: 90vh;
+  width: 90vw;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: rgb(93, 79, 125);
+  background: radial-gradient(
+    circle,
+    rgba(93, 79, 125, 1) 0%,
+    rgba(44, 49, 90, 1) 100%
+  );
+}
