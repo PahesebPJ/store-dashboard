@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 
 import './App.css';
 
@@ -14,8 +14,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         {/*PUBLIC ROUTES */}
-        <Route path="/login" element={<Login />}/>
-        <Route path="/register" element={<Register />}/>
+        <Route path="login" element={<Login />}/>
+        <Route path="register" element={<Register />}/>
+        <Route path="/" element={<Navigate to="/dashboard" />} />
 
         {/*PRIVATE ROUTES */}
         <Route element={<RequiredAuth />}>

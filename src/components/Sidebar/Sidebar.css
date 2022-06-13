@@ -31,9 +31,11 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.sidebar-option:hover {
-  background: #845ef7;
-  color: #fff;
+.sidebar-option__link:hover {
+  background-color: white;
+  color: rgb(93, 79, 125);
 }

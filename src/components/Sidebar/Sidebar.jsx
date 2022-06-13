@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom'
+import useContent from '../../hooks/useContent'
 
 import UserDetails from '../UserDetails/UserDetails'
 import config from '../../config/configTables'
 
 import './Sidebar.css'
 
-const importTableConfiguration = () => {
-  console.log('first');
-}
-
 const Sidebar = () => {
-  
+
+  const { setContent} = useContent();
+
+  const captureContent = (data) => {
+    setContent(data);
+  }
+
   return (
     <nav className="sidebar-container">
         <UserDetails />
@@ -18,7 +21,7 @@ const Sidebar = () => {
           {
             config.map(link => {
               return (
-                  <li className="sidebar-option" onClick={() => importTableConfiguration}>
+                  <li className="sidebar-option" onClick={() => captureContent(link)} key={link.name}>
                     <Link 
                       className="sidebar-option__link" 
                       to={link.route}

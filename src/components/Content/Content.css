@@ -1,2 +1,50 @@
 .content-container {
+  color: #fff;
+  padding-left: 15px;
+  padding-top: 15px;
+  width: 80%;
+}
+
+.content-description {
+}
+
+.add-button {
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.6s;
+  font-weight: 600;
+}
+
+.add-button:hover {
+  background-color: white;
+  color: rgb(93, 79, 125);
+  border-radius: 5px;
+}
+
+.simple-modal-button {
+  border: 1px solid rgb(93, 79, 125);
+  color: rgb(93, 79, 125);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.simple-modal-button:hover {
+  background-color: rgb(93, 79, 125);
+  color: white;
 }

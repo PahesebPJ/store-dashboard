@@ -14,7 +14,7 @@ const UserDetails = () => {
             auth?.url ? <img src={auth?.url} alt="" className="user-details__image" /> 
             : <img src={defaultPofilePic} alt="" className="user-details__image" />
         }
-        <h3>Welcome {auth?.username}!</h3>
+        <h3 className="welcome-message">Welcome <span>{auth?.username}!</span></h3>
     </div>
   )
 }
